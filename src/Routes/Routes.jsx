@@ -4,6 +4,7 @@ import {
 import Root from "../layouts/Root";
 import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home";
+import AvailableCamps from "../pages/AvailableCamps";
 
 
   export const router = createBrowserRouter([
@@ -15,6 +16,10 @@ import Home from "../pages/Home";
         {
             index: true,
             element: <Home/>
+        }, 
+        {
+            path: "/availableCamps",
+            element:<AvailableCamps/>
         }, 
     ]
     },
