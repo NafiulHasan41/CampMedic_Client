@@ -1,3 +1,90 @@
-1.https://d1csarkz8obe9u.cloudfront.net/posterpreviews/free-medical-camp-design-template-b6101353f0605b9179200e35e650d2e5_screen.jpg?ts=1707475487
-2.https://image.slidesharecdn.com/freemedicalcamp-211206093138/85/free-medical-camp-1-320.jpg?cb=1670567733
-3.
+[
+    {
+      "CampName": "Nature Adventure Camp",
+      "Image": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/free-medical-camp-design-template-b6101353f0605b9179200e35e650d2e5_screen.jpg?ts=1707475487",
+      "CampFees": "$150",
+      "Date": "2024-06-15",
+      "Time": "08:00:00",
+      "Location": "Mountain Valley",
+      "HealthcareProfessional": "Dr. Sarah Green",
+      "ParticipantCount": 25,
+      "Description": "Experience the thrill of the wild with guided hikes and camping activities."
+    },
+    {
+      "CampName": "Beachside Yoga Retreat",
+      "Image": "https://image.slidesharecdn.com/freemedicalcamp-211206093138/85/free-medical-camp-1-320.jpg?cb=1670567733",
+      "CampFees": "$200",
+      "Date": "2024-07-10",
+      "Time": "06:00:00",
+      "Location": "Sunny Beach",
+      "HealthcareProfessional": "Dr. Mark Brown",
+      "ParticipantCount": 30,
+      "Description": "Relax and rejuvenate with daily yoga sessions by the sea."
+    },
+    {
+      "CampName": "Tech Innovators Bootcamp",
+      "Image": "https://lh4.googleusercontent.com/proxy/hQjh5PyW1-NIxARs-K08tfLO1PmBIhVhZ_1DqSPA4y2yCA0-Cm17ehnSpQDnI4bJP1RqSzSJosQQnbrIoZOlZJZ53JCDsoZm8a-v08hZv8pFATs6R_4-IG3CPLJ6upmJABk5rZPxlhmBICx6HRm0ivzwcxJt22ZbYWxK2WA1-pnWP2GA",
+      "CampFees": "$250",
+      "Date": "2024-08-05",
+      "Time": "09:00:00",
+      "Location": "Tech Park",
+      "HealthcareProfessional": "Dr. Emily White",
+      "ParticipantCount": 40,
+      "Description": "Learn the latest in technology and innovation with industry experts."
+    },
+    {
+      "CampName": "Fitness and Wellness Camp",
+      "Image": "https://dypatilunikop.org/wp-content/uploads/2019/07/ambap-medicalcamp-1024x682.jpeg",
+      "CampFees": "$180",
+      "Date": "2024-06-20",
+      "Time": "07:00:00",
+      "Location": "City Gym",
+      "HealthcareProfessional": "Dr. John Smith",
+      "ParticipantCount": 20,
+      "Description": "Boost your health with personalized fitness and wellness plans."
+    },
+    {
+      "CampName": "Culinary Arts Camp",
+      "Image": "https://www.keyholeclinic.in/wp-content/uploads/2023/09/st-theresa-college-medical-camp-05.jpg",
+      "CampFees": "$300",
+      "Date": "2024-07-25",
+      "Time": "10:00:00",
+      "Location": "Gourmet Kitchen",
+      "HealthcareProfessional": "Chef Anne Roberts",
+      "ParticipantCount": 15,
+      "Description": "Master the art of cooking with hands-on classes and expert chefs."
+    },
+    {
+      "CampName": "Adventure Sports Camp",
+      "Image": "https://www.keyholeclinic.in/wp-content/uploads/2023/09/st-theresa-college-medical-camp-6.jpg",
+      "CampFees": "$220",
+      "Date": "2024-08-18",
+      "Time": "08:00:00",
+      "Location": "Adventure Park",
+      "HealthcareProfessional": "Dr. Alex Johnson",
+      "ParticipantCount": 35,
+      "Description": "Engage in thrilling sports activities under professional supervision."
+    },
+    {
+      "CampName": "Art and Craft Camp",
+      "Image": "https://breathofthespirit.org/wp-content/uploads/2023/03/medicle-camp-.png",
+      "CampFees": "$100",
+      "Date": "2024-06-10",
+      "Time": "09:00:00",
+      "Location": "Creative Studio",
+      "HealthcareProfessional": "Dr. Lisa Carter",
+      "ParticipantCount": 25,
+      "Description": "Unleash your creativity with various art and craft projects."
+    },
+    {
+      "CampName": "Science Explorers Camp",
+      "Image": "https://5.imimg.com/data5/MA/AJ/MN/GLADMIN-25045544/selection-214.png",
+      "CampFees": "$200",
+      "Date": "2024-07-05",
+      "Time": "09:00:00",
+      "Location": "Science Center",
+      "HealthcareProfessional": "Dr. Robert Lee",
+      "ParticipantCount": 30,
+      "Description": "Discover the wonders of science through fun experiments and activities."
+    }
+  ]

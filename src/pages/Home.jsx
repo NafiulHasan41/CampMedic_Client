@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import Carousel from "../Components/Carousel";
+import PopularMedicalCamp from "../Components/MedicalCamps/PopularMedicalCamp";
 
 
 const Home = () => {
@@ -11,6 +12,9 @@ const Home = () => {
             </Helmet>
             <div className="w-full  md:-mt-24">
                 <Carousel/>
+            </div>
+            <div>
+                <PopularMedicalCamp/>
             </div>
         </div>
     );
