@@ -177,21 +177,7 @@ const Navbar = () => {
                                            </svg>
                                        </label>
                                    </div>
-                                   <div>
-
-                                       {user ? (
-                                       <button type="button" className="flex items-center focus:outline-none"
-                                           aria-label="toggle profile dropdown">
-                                           <div title={user?.displayName}
-                                               className="w-10 h-10 overflow-hidden border-2 border-gray-400 rounded-full">
-                                               <img referrerPolicy='no-referrer' src={user?.photoURL}
-                                                   alt={user?.displayName} className="object-cover w-full h-full" />
-                                           </div>
-
-                                       </button>
-                                       ) : null}
-                                   </div>
-
+                                  
                                    <div>
                                        {user ? (
                                        <>
@@ -200,15 +186,14 @@ const Navbar = () => {
                                                    className="btn btn-ghost btn-circle avatar">
                                                    <div className="w-10 rounded-full">
                                                        <img alt="Tailwind CSS Navbar component"
-                                                           src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                                           src={user?.photoURL} />
                                                    </div>
                                                </div>
                                                <ul tabIndex={0}
                                                    className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                                                    <li>
                                                        <p className="justify-between">
-                                                           
-                                                           <span className="badge">New</span>
+                                                       {user?.displayName}
                                                        </p>
                                                    </li>
                                                    <li><a>Dashboard</a></li>
