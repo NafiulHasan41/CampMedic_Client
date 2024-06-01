@@ -113,11 +113,11 @@ const Navbar = () => {
             <>
              
                 <NavLink to="/"  className={({ isActive }) =>
-                      isActive ? " text-white hover:bg-cyan-700 font-bold   border-none" : "font-bold my-2 hover:bg-cyan-300  md:mx-2  text-[#278e83] rounded-lg  border-none"
+                      isActive ? " text-white hover:bg-cyan-700 font-bold   border-none" : "font-bold my-2 hover:bg-cyan-300  md:mx-2  text-[#55dbce] rounded-lg  border-none"
                     }>Home</NavLink>
 
                 <NavLink to="/availableCamps"  className={({ isActive }) =>
-                      isActive ? " text-white hover:bg-cyan-700 font-bold   border-none" : "font-bold my-2 hover:bg-cyan-300  md:mx-2  text-[#238279] rounded-lg  border-none"
+                      isActive ? " text-white hover:bg-cyan-700 font-bold   border-none" : "font-bold my-2 hover:bg-cyan-300  md:mx-2  text-[#55dbce] rounded-lg  border-none"
                     }>AvailableCamps</NavLink>
 
                   
@@ -132,7 +132,7 @@ const Navbar = () => {
     return (
         <div>
        <div>
-           <nav className=" relative  bg-[#40E0D0]/30 ">
+           <nav className=" relative z-50 bg-black/20  ">
                <div className="container  px-3 py-3 mx-auto">
                    <div className="flex justify-between  lg:flex lg:items-center  lg:justify-between">
                        <div className="flex items-center justify-between">

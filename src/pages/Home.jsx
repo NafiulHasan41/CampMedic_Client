@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import Carousel from "../Components/Carousel";
 
 
 const Home = () => {
@@ -8,7 +9,9 @@ const Home = () => {
               <Helmet>
             <title>CampMedic : Home</title>
             </Helmet>
-            this is home
+            <div className="w-full  md:-mt-24">
+                <Carousel/>
+            </div>
         </div>
     );
 };
