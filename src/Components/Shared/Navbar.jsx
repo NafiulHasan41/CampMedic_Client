@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
-import useAdmin from "../../hooks/useAdmin";
+// import useAdmin from "../../hooks/useAdmin";
 
 
 
@@ -17,7 +17,7 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     };
 
-    const [isAdmin] = useAdmin();
+    // const [isAdmin] = useAdmin();
 
 
 

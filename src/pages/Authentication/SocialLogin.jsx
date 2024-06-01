@@ -11,7 +11,6 @@ const SocialLogin = () => {
     const axiosPublic = useAxiosPublic();
     const navigate = useNavigate();
     const location = useLocation();
-    console.log(location);
 
     const handleGoogleSignIn = () =>{
         signInWithGoogle()
