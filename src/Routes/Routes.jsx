@@ -7,6 +7,8 @@ import Home from "../pages/Home";
 import AvailableCamps from "../pages/AvailableCamps";
 import Login from "../pages/Authentication/Login";
 import Register from "../pages/Authentication/Register";
+import CampDetails from "../Components/MedicalCamps/CampDetails";
+import PrivateRoute from "./PrivateRoutes";
 
 
   export const router = createBrowserRouter([
@@ -31,6 +33,10 @@ import Register from "../pages/Authentication/Register";
             path:"/register",
             element:<Register/>
         },
+        {
+          path:"/camp-details/:campId",
+          element:<PrivateRoute><CampDetails/></PrivateRoute> ,
+        }
     ]
     },
     

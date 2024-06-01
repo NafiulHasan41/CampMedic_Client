@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import CampCard from "./CampCard";
+import { Link } from "react-router-dom";
 
 
 const PopularMedicalCamp = () => {
@@ -65,6 +66,12 @@ const PopularMedicalCamp = () => {
                         <CampCard key={camp._id} camp={camp}/>
                     ))
                 }
+            </div>
+
+            <div className=" flex justify-center">
+                <Link to="/availableCamps">
+              <h1 className=" mb-5 md:mb-10 btn w-80 text-xl md:text-4xl font-semibold bg-cyan-800 shadow-2xl shadow-cyan-700 hover:bg-cyan-100 border-none hover:scale-110  md:font-bold text-center text-[#40E0D0] capitalize lg:text-3xl my-8 md:my-16"> Show All Camps</h1>
+              </Link>
             </div>
             
         </div>

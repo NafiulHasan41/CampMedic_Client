@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
 // import useAdmin from "../../hooks/useAdmin";
@@ -48,9 +48,11 @@ const Navbar = () => {
 
       const navigate = useNavigate();
 
-
+      // for custom navbar color 
+      const location = useLocation();
+      const navBarClass = location.pathname === "/" ? "bg-black/20" : "bg-[#40E0D0]/50";
     
-
+    
 
     
 
@@ -132,7 +134,7 @@ const Navbar = () => {
     return (
         <div>
        <div>
-           <nav className=" relative z-50 bg-black/20  ">
+           <nav className={`relative z-50 ${navBarClass}`}>
                <div className="container  px-3 py-3 mx-auto">
                    <div className="flex justify-between  lg:flex lg:items-center  lg:justify-between">
                        <div className="flex items-center justify-between">
