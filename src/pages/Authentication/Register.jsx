@@ -23,7 +23,7 @@ const Register = () => {  const axiosPublic = useAxiosPublic();
        try{
 
         const imageURL = await imageUpload(imageFile);
-         console.log(imageURL);
+     
     
         createUser(data.email, data.password)
             .then(result => {
