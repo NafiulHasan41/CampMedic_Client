@@ -2,9 +2,10 @@ import { CiCalendarDate } from "react-icons/ci";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { IoIosTime } from "react-icons/io";
 import { MdOutlineAttachMoney } from "react-icons/md";
-import { Link, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
+import JoinModal from "../Modal/JoinModal";
 
 
 const CampDetails = () => {
@@ -12,7 +13,7 @@ const CampDetails = () => {
 
     const id = useParams().campId;
    
-    const {data: camp = [], isPending: loading} = useQuery({
+    const {data: camp = [], isPending: loading , refetch } = useQuery({
         queryKey: ['CampDetails'], 
         queryFn: async() =>{
             const res = await axiosSecure.get(`/camp-details/${id}`);
@@ -114,10 +115,8 @@ const CampDetails = () => {
             <h1 className="px-2 text-[#FFFFFF] text-sm">{camp.Time}</h1>
         </div>
         </div>
-        <div className=" my-2 text-center">
-            <Link>
-         <button className=" btn bg-[#40E0D0] font-bold text-xl hover:bg-cyan-200 hover:scale-110 rounded-full border-none ">Details</button>
-         </Link>
+        <div className=" my-2 text-center"> 
+         <JoinModal camp={camp} refetch={refetch} />
         </div>
 
         

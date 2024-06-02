@@ -12,6 +12,8 @@ const SocialLogin = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    console.log(location);
+
     const handleGoogleSignIn = () =>{
         signInWithGoogle()
         .then(result =>{
@@ -26,7 +28,7 @@ const SocialLogin = () => {
 
               Swal.fire("Login Successful")
               
-              if( location.state === "/login" || location.pathname === "/login")
+              if( location.state === "/login")
                 {
                   navigate("/")
                 }
