@@ -12,6 +12,7 @@ import {
 import AuthProvider from './providers/AuthProvider';
 import { HelmetProvider } from 'react-helmet-async';
 import { router } from './Routes/Routes';
+import ScrollToTop from './Components/ScrollingHandle/ScrollToTop';
 
 const queryClient = new QueryClient();
 
@@ -20,7 +21,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <AuthProvider>
       <QueryClientProvider client={queryClient}>
         <HelmetProvider>
-            <RouterProvider router={router} />
+            <RouterProvider router={router} >
+              <ScrollToTop/>
+            </RouterProvider>
         </HelmetProvider>
       </QueryClientProvider>
     </AuthProvider>

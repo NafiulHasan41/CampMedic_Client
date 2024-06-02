@@ -116,7 +116,7 @@ const CampDetails = () => {
         </div>
         </div>
         <div className=" my-2 text-center"> 
-         <JoinModal camp={camp} refetch={refetch} />
+         <JoinModal camp={camp} refetch={refetch}  />
         </div>
 
         

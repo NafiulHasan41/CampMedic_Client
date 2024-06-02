@@ -13,7 +13,7 @@ const options = [
   { value: 'Other', label: 'Other' }
 ];
 
-const JoinModal = ({camp , refetch }) => {
+const JoinModal = ({camp , refetch  }) => {
 
     const axiosSecure = useAxiosSecure();
 
@@ -69,7 +69,7 @@ const JoinModal = ({camp , refetch }) => {
 
                 else{
 
-                    Swal.fire(`"${ParticipantName} , you have already joined the camp", "error"`)
+                    Swal.fire(`"${ParticipantName} , you have already joined the camp"`)
                 }
             
                 refetch();
@@ -182,7 +182,7 @@ const JoinModal = ({camp , refetch }) => {
                               </button>
 
                               <button type="submit"
-                                  
+                                
                                   className="w-full px-4 py-2 mt-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md sm:mt-0 sm:w-1/2 sm:mx-2 hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40">
                                   Join
                               </button>
@@ -200,6 +200,7 @@ const JoinModal = ({camp , refetch }) => {
 JoinModal.propTypes = {
     camp: PropTypes.object.isRequired,
     refetch: PropTypes.func.isRequired,
+  
 };
 
 export default JoinModal;
