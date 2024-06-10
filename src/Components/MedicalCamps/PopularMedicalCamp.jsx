@@ -60,10 +60,10 @@ const PopularMedicalCamp = () => {
             <div className=" border-b-2 border-[#40E0D0] w-[50%] mx-auto mb-10"></div>
             </div>
 
-            <div className=" p-5 md:p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-8 ">
+            <div className=" p-5 md:p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-8 justify-items-center ">
                 {
                     Camps.map((camp) => (
-                        <CampCard key={camp._id} camp={camp}/>
+                        <CampCard   key={camp._id} camp={camp}/>
                     ))
                 }
             </div>

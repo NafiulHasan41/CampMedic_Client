@@ -241,8 +241,8 @@ const AvailableCamps = () => {
  
            
  
-  {/* for shoe all cart showing  */}
-             <div className={` grid grid-cols-1 md:grid-cols-2 ${showColumn}  gap-5`}>
+  {/* for for showing camp all cart showing  */}
+             <div className={` grid grid-cols-1 md:grid-cols-2 ${showColumn}  gap-5 justify-items-center gap-y-5 lg:gap-y-10`}>
 
                 {
                       camps.map((camp) => (

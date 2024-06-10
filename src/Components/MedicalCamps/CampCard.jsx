@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 
 const CampCard = ({camp}) => {
     return (
-        <div data-aos="zoom-in-up" className="w-full max-w-sm overflow-hidden bg-[#008B8B] rounded-lg  dark:bg-gray-800 shadow-2xl shadow-cyan-700 group">
-    <img className="object-cover object-center group-hover:scale-110  w-full h-56" src={camp.Image} alt="avatar"/>
+        <div data-aos="zoom-in-up" className="w-full max-w-sm overflow-hidden bg-[#008B8B] rounded-lg  dark:bg-gray-800 shadow-2xl shadow-cyan-700 group ">
+       <img className="object-cover object-center group-hover:scale-110  w-full h-56" src={camp.Image} alt="avatar"/>
 
     <div className="flex items-center px-6 py-3 bg-gray-900">
     

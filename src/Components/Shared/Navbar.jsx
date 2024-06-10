@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
-// import useAdmin from "../../hooks/useAdmin";
+import useAdmin from "../../hooks/useAdmin";
+
 
 
 
@@ -17,7 +18,7 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     };
 
-    // const [isAdmin] = useAdmin();
+    const [isAdmin] = useAdmin();
 
 
 
@@ -189,11 +190,22 @@ const Navbar = () => {
                                                <ul tabIndex={0}
                                                    className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                                                    <li>
-                                                       <p className="justify-between">
+                                                       <p className="justify-between" style={{ pointerEvents: 'none' }} >
                                                            {user?.displayName}
                                                        </p>
                                                    </li>
-                                                   <li><a>Dashboard</a></li>
+                                                   <li>    {
+                        user && isAdmin && <Link to="/dashboard/admin_home"  className={({ isActive }) =>
+                            isActive ? " text-white hover:bg-cyan-700 font-bold   border-none" : "font-bold my-2 hover:bg-cyan-700  md:mx-2  text-blue-500 rounded-lg  border-none"
+                          }>Dashboard</Link>
+
+                    }
+                    {
+                        user && !isAdmin && <Link to="/dashboard/userHome"  className={({ isActive }) =>
+                            isActive ? " text-white hover:bg-cyan-700 font-bold   border-none" : "font-bold my-2 hover:bg-cyan-700  md:mx-2  text-blue-500 rounded-lg  border-none"
+                          }>Dashboard</Link>
+
+                    }</li>
                                                    <li><button onClick={handleLogOut}
                                                            className="btn  hover:bg-cyan-700  lg:text-xl  bg-white border-none text-black">
                                                            Logout

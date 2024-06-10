@@ -84,11 +84,11 @@ const Register = () => {  const axiosPublic = useAxiosPublic();
                     <title>CampMedic  | Register</title>
                 </Helmet>
                 <div className="hero min-h-screen  ">
-                    <div className="hero-content flex-col lg:flex-row-reverse">
-                        <div className="flex-1 text-center lg:text-left">
-                        <img className=" md:w-full rounded-xl" src="https://img.freepik.com/free-vector/account-concept-illustration_114360-399.jpg?w=360" alt="" />
+                    <div className="hero-content flex-col lg:flex-row">
+                        <div className=" w-1/2 text-center lg:text-left">
+                        <img className=" md:w-full rounded-xl" src="https://i.ibb.co/CPrH9g0/a-well-organized-and-bustling-medical-camp-showcas-Eo-J0-Yx-3-Qm6iq-Ji-SYjxr-Wg-RKJ285-KOSqq-NBp-W96.jpg" alt="" />
                         </div>
-                        <div className=" flex-1 card flex-shrink-0 w-full max-w-sm shadow-2xl bg-[#40E0D0]">
+                        <div className=" w-1/2 card flex-shrink-0  max-w-sm shadow-2xl bg-[#40E0D0]">
                             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                                 <div className="form-control">
                                     <label className="label">

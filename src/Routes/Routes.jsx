@@ -9,6 +9,10 @@ import Login from "../pages/Authentication/Login";
 import Register from "../pages/Authentication/Register";
 import CampDetails from "../Components/MedicalCamps/CampDetails";
 import PrivateRoute from "./PrivateRoutes";
+import Dashboard from "../layouts/Dashboard";
+import AdminRoute from "./AdminRoute";
+import AdminHome from "../pages/Admin/AdminHome";
+import Add_Camp from "../pages/Admin/Add_Camp";
 
 
   export const router = createBrowserRouter([
@@ -39,6 +43,21 @@ import PrivateRoute from "./PrivateRoutes";
         }
     ]
     },
+    {
+      path:"dashboard",
+      element:<PrivateRoute><Dashboard/></PrivateRoute>,
+      children:[
+        // admin route
+        {
+          path:"admin_home",
+          element:<AdminRoute><AdminHome/></AdminRoute>
+        },
+        {
+          path:"add_camp",
+          element:<AdminRoute><Add_Camp/></AdminRoute>
+        }
+      ]
+    }
     
 
 ]);

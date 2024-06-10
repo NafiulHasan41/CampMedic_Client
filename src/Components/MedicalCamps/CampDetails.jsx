@@ -69,7 +69,7 @@ const CampDetails = () => {
             
             <div className="w-full p-6 bg-[#40E0D0]  md:flex md:items-center rounded-2xl md:bg-transparent md:p-0 lg:px-12 md:justify-evenly">
                 <div className="h-24 w-24 md:mx-6 rounded-full object-cover shadow-md md:h-[32rem] md:w-80 lg:h-[36rem] lg:w-[26rem] md:rounded-2xl" >
-                     <img className=" w-full h-full object-cover object-center hover:scale-110" src={camp.Image} alt="client photo" />
+                     <img className=" w-full h-full object-cover object-center hover:scale-110 rounded-lg" src={camp.Image} alt="client photo" />
                 </div>
                 
                 <div className="mt-2 md:mx-6 ">
