@@ -6,7 +6,11 @@ import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
 
 
+
 const CampCard = ({camp}) => {
+
+    
+     
     return (
         <div data-aos="zoom-in-up" className="w-full max-w-sm overflow-hidden bg-[#008B8B] rounded-lg  dark:bg-gray-800 shadow-2xl shadow-cyan-700 group ">
        <img className="object-cover object-center group-hover:scale-110  w-full h-56" src={camp.Image} alt="avatar"/>
@@ -45,12 +49,12 @@ const CampCard = ({camp}) => {
               
            <CiCalendarDate />
 
-            <h1 className="px-2 text-[#FFFFFF] text-sm">{camp.Date}</h1>
+            <h1 className="px-2 text-[#FFFFFF] text-sm">{ new Date(camp.Date).toLocaleDateString()}</h1>
         </div>
         <div className="flex items-center mt-4 text-black dark:text-gray-200 text-2xl">
             
         <IoIosTime/>
-            <h1 className="px-2 text-[#FFFFFF] text-sm">{camp.Time}</h1>
+            <h1 className="px-2 text-[#FFFFFF] text-sm">{camp?.Time}</h1>
         </div>
         </div>
         <div className=" my-2 text-center">

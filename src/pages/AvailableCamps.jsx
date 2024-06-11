@@ -22,7 +22,7 @@ const AvailableCamps = () => {
 
   const showColumn =  columnCount ? "lg:grid-cols-3" : "lg:grid-cols-2";
 
-  console.log(showColumn);
+  // console.log(showColumn);
   const [sort, setSort] = useState('')
   const [search, setSearch] = useState('')
   const [searchText, setSearchText] = useState('')

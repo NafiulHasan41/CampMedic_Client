@@ -121,7 +121,7 @@ const Dashboard = () => {
                                 </NavLink>
                               </li>
                               <li>
-                                <NavLink to="/dashboard/manageItems">
+                                <NavLink to="/dashboard/manage_camp">
                                   <FaList></FaList>
                                   MANAGE CAMPS
                                 </NavLink>

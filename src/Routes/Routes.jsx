@@ -13,6 +13,7 @@ import Dashboard from "../layouts/Dashboard";
 import AdminRoute from "./AdminRoute";
 import AdminHome from "../pages/Admin/AdminHome";
 import Add_Camp from "../pages/Admin/Add_Camp";
+import Manage_camps from "../pages/Admin/Manage_camps";
 
 
   export const router = createBrowserRouter([
@@ -55,6 +56,11 @@ import Add_Camp from "../pages/Admin/Add_Camp";
         {
           path:"add_camp",
           element:<AdminRoute><Add_Camp/></AdminRoute>
+        }
+        ,
+        {
+          path:"manage_camp",
+          element:<AdminRoute><Manage_camps/></AdminRoute>
         }
       ]
     }
