@@ -14,6 +14,7 @@ const Manage_camps = () => {
     // // for search 
 
     const axiosPublic = useAxiosPublic();
+    const axiosSecure = useAxiosSecure();
     const itemsPerPage = 6;
     const [currentPage, setCurrentPage] = useState(1)
     const [count, setCount] = useState(0)
@@ -25,7 +26,6 @@ const Manage_camps = () => {
    const fetchCamps = async ({ queryKey }) => {
     
     const [  ,currentPage, itemsPerPage, search] = queryKey;
-    console.log("Inside" ,currentPage, itemsPerPage)
     const response = await axiosPublic.get(`/camps?page=${currentPage}&size=${itemsPerPage}&search=${search}`);
     return response.data;
     
@@ -33,7 +33,7 @@ const Manage_camps = () => {
 
 
   
-  const { data, isLoading, isError } = useQuery({ 
+  const { data, isLoading, isError , refetch } = useQuery({ 
     queryKey: ['camps', currentPage, itemsPerPage, search], 
     queryFn: fetchCamps
   });
@@ -141,6 +141,7 @@ const handleDelete = async campId => {
             try {
                  await axiosSecure.delete(`/delete-camp/${campId}`)
                 Swal.fire('Delete Successful')
+                refetch();
                 
               } catch (err) {
                 Swal.fire(err.message)
