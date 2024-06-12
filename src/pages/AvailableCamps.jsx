@@ -1,11 +1,16 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { TfiLayoutColumn2Alt, TfiLayoutColumn3Alt } from "react-icons/tfi";
 import CampCard from "../Components/MedicalCamps/CampCard";
+import { useQuery } from "@tanstack/react-query";
+import useAxiosPublic from "../hooks/useAxiosPublic";
 
 
 const AvailableCamps = () => {
+  
+  const axiosPublic = useAxiosPublic();
+
+
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -15,7 +20,7 @@ const AvailableCamps = () => {
 
     // For handling all sideBar action
 
-   const itemsPerPage =10;
+   const itemsPerPage = 6;
   const [currentPage, setCurrentPage] = useState(1)
   const [count, setCount] = useState(0)
   const [columnCount, setColumnCount] = useState(true);
@@ -28,42 +33,55 @@ const AvailableCamps = () => {
   const [searchText, setSearchText] = useState('')
   const [camps, setCamps] = useState([])
 
-  const [loading , setLoading] = useState(false);
 
 
+  // using Axios
+
+  const fetchCamps = async ({ queryKey }) => {
+    
+    const [  ,currentPage, itemsPerPage, search, sort] = queryKey;
+    console.log("Inside" ,currentPage, itemsPerPage)
+    const response = await axiosPublic.get(`/camps?page=${currentPage}&size=${itemsPerPage}&sort=${sort}&search=${search}`);
+    return response.data;
+    
+  };
+
+
+  
+  const { data, isLoading, isError } = useQuery({ 
+    queryKey: ['camps', currentPage, itemsPerPage, search, sort], 
+    queryFn: fetchCamps
+  });
+  
   useEffect(() => {
-    const getData = async () => {
-        setLoading(true);
-      const { data } = await axios(
-        `${
-          import.meta.env.VITE_API_URL
-        }/camps?page=${currentPage}&size=${itemsPerPage}&sort=${sort}&search=${search}`
-      )
-      setCamps(data)
-
-      setLoading(false);
-     
+    if (!isLoading && !isError) {
+      setCamps(data);
     }
-    getData()
-  }, [currentPage,  itemsPerPage, search, sort])
-
-
-  useEffect(() => {
-    const getCount = async () => {
-        setLoading(true);
-      const { data } = await axios(
-        `${
-          import.meta.env.VITE_API_URL
-        }/camps_count?search=${search}`
-      )
-
-      setCount(data.count)
-      setLoading(false);
-    }
-    getCount()
-  }, [ search])
+  }, [data, isLoading, isError]);
 
  
+
+  //fetching camp count
+  const fetchCampCount = async ({ queryKey }) => {
+    const [ , search ] = queryKey;
+    const response = await axiosPublic.get(`/camps_count?search=${search}`);
+    return response.data;
+  };
+  
+  const { data:campCount, isLoading: countLoading , isError: countError } = useQuery({ 
+    queryKey: ['campCount', search], 
+    queryFn: fetchCampCount 
+  });
+  
+  useEffect(() => {
+    if (!countLoading && !countError) {
+      setCount(campCount.count);
+    }
+  }, [campCount,countError,countLoading]);
+
+  console.log(count);
+
+ //pagination
   const numberOfPages = Math.ceil(count / itemsPerPage)
   const pages = [...Array(numberOfPages).keys()].map(element => element + 1)
 
@@ -72,6 +90,8 @@ const AvailableCamps = () => {
    
     setCurrentPage(value)
   }
+
+
   const handleReset = () => {
     setSort('')
     setSearch('')
@@ -87,7 +107,7 @@ const AvailableCamps = () => {
 
 
 
-  if (loading) {
+  if (isLoading) {
     return (
       <section className="bg-white  min-h-screen">
       <div className="container px-6 py-10 mx-auto animate-pulse">
