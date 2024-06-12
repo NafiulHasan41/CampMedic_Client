@@ -1,11 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
-import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
-import { FaEdit } from "react-icons/fa";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { useEffect, useState } from "react";
+import UpdateCamp from "../../Components/Modal/UpdateCamp";
 // import { useState } from "react";
 
 
@@ -44,7 +43,7 @@ const Manage_camps = () => {
     }
   }, [data, isLoading, isError]);
 
-  console.log("Camps",camps);
+//   console.log("Camps",camps);
 
 
   //fetching camp count
@@ -65,7 +64,7 @@ const Manage_camps = () => {
     }
   }, [campCount,countError,countLoading]);
 
-  console.log(count);
+//   console.log(count);
 
   //pagination
   const numberOfPages = Math.ceil(count / itemsPerPage)
@@ -243,9 +242,7 @@ const handleDelete = async campId => {
                              text-white">
                              <RiDeleteBin5Fill /></button>
 
-                         <Link to={`update-camp/${camp?._id}`}> <button className="btn bg-green-500 text-white">
-                         <FaEdit /></button>
-                         </Link>
+                         <UpdateCamp camp={camp} refetch={refetch} />
                      </td>
                  </tr>
                  )
