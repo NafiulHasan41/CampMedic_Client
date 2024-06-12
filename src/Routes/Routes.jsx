@@ -15,6 +15,7 @@ import AdminHome from "../pages/Admin/AdminHome";
 import Add_Camp from "../pages/Admin/Add_Camp";
 import Manage_camps from "../pages/Admin/Manage_camps";
 import RegisteredCamp from "../pages/Admin/RegisteredCamp";
+import UpdateUser from "../Components/Shared/UpdateUser";
 
 
   export const router = createBrowserRouter([
@@ -67,6 +68,11 @@ import RegisteredCamp from "../pages/Admin/RegisteredCamp";
         {
           path:"registered_camp",
           element:<AdminRoute><RegisteredCamp/></AdminRoute>
+        }
+        ,
+        {
+          path:"update_user",
+          element:<AdminRoute><UpdateUser/></AdminRoute>
         }
       ]
     }

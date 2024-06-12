@@ -6,6 +6,7 @@ import useAuth from "../../hooks/useAuth";
 import Select from 'react-select';
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
+import useAdmin from "../../hooks/useAdmin";
 
 const options = [
   { value: 'Male', label: 'Male' },
@@ -18,6 +19,7 @@ const JoinModal = ({camp , refetch  }) => {
     const axiosSecure = useAxiosSecure();
 
     const { user } = useAuth();
+    const { isAdmin } = useAdmin();
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -35,6 +37,12 @@ const JoinModal = ({camp , refetch  }) => {
     const handleJoin = async (e) => {
         e.preventDefault();
 
+        if(isAdmin)
+            {
+                return Swal.fire('Admins cannot join the camp');
+            
+            }
+
         setIsOpen(false);
 
         const form = e.target;
@@ -49,8 +57,10 @@ const JoinModal = ({camp , refetch  }) => {
         const PhoneNumber = parseInt(form.phoneNumber.value);
         const EmergencyContact = parseInt(form.emergencyContact.value);
         const Gender = selectedOption.value;
+        const PaymentStatus = 'Unpaid';
+        const ConfirmationStatus = 'Pending';
 
-        const participant = {CampId, CampName, CampFees, Location, HealthcareProfessional, ParticipantName, ParticipantEmail, age, PhoneNumber, EmergencyContact, Gender};
+        const participant = {CampId, CampName, CampFees, Location, HealthcareProfessional, ParticipantName, ParticipantEmail, age, PhoneNumber, EmergencyContact, Gender, PaymentStatus, ConfirmationStatus};
 
       
 

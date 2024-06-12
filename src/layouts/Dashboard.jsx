@@ -1,11 +1,12 @@
-import {  FaCalendar, FaHome, FaList, FaSearch, FaUsers } from "react-icons/fa";
+import {  FaCalendar,  FaEdit,  FaHome, FaList, FaSearch, FaUsers } from "react-icons/fa";
 import { IoMdAddCircleOutline } from "react-icons/io";
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 
 import { useState } from "react";
 import useAdmin from "../hooks/useAdmin";
 import useAuth from "../hooks/useAuth";
 import { VscFeedback } from "react-icons/vsc";
+
 
 
 
@@ -103,6 +104,9 @@ const Dashboard = () => {
                               <p className="mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400">
                                 {user?.email}
                               </p>
+                             <Link to="/dashboard/update_user" > <button className="btn bg-black font-bold border-none text-white hover:scale-110 ">
+                              <FaEdit /></button>
+                              </Link>
                             </div>
                           </li>
                           <div className="divider font-extrabold" ></div>
