@@ -16,6 +16,10 @@ import Add_Camp from "../pages/Admin/Add_Camp";
 import Manage_camps from "../pages/Admin/Manage_camps";
 import RegisteredCamp from "../pages/Admin/RegisteredCamp";
 import UpdateUser from "../Components/Shared/UpdateUser";
+import UserHome from "../pages/User/UserHome";
+import RegisteredCamps from "../pages/User/RegisteredCamps";
+import Pay from "../Components/Payment/Pay";
+import PaymentHistory from "../Components/Payment/PaymentHistory";
 
 
   export const router = createBrowserRouter([
@@ -72,8 +76,28 @@ import UpdateUser from "../Components/Shared/UpdateUser";
         ,
         {
           path:"update_user",
-          element:<AdminRoute><UpdateUser/></AdminRoute>
-        }
+          element:<PrivateRoute><UpdateUser/></PrivateRoute>
+        },
+        // user route
+        
+        {
+          path:"user_home",
+          element:<PrivateRoute><UserHome/></PrivateRoute>
+        },
+        {
+          path:"registered_camps",
+          element:<PrivateRoute><RegisteredCamps/></PrivateRoute>
+        },
+        {
+          path:"pay/:campId",
+          element:<PrivateRoute><Pay/></PrivateRoute>
+        },
+        {
+          path:"paymentHistory",
+          element:<PrivateRoute><PaymentHistory/></PrivateRoute>
+        },
+
+
       ]
     }
     

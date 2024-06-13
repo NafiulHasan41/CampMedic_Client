@@ -24,7 +24,7 @@ const SocialLogin = () => {
             }
             axiosPublic.post('/users', userInfo)
             .then( async (res) =>{
-                console.log(res.data);
+                // console.log(res.data);
 
               Swal.fire("Login Successful")
               

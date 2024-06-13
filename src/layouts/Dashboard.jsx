@@ -153,26 +153,20 @@ const Dashboard = () => {
                           ) : (
                             <>
                               <li>
-                                <NavLink to="/dashboard/userHome">
+                                <NavLink to="/dashboard/user_home">
                                   <FaHome></FaHome>
                                   User Home
                                 </NavLink>
                               </li>
                               <li>
-                                <NavLink to="/dashboard/userHome">
-                                  <FaHome></FaHome>
-                                  User Home
-                                </NavLink>
-                              </li>
-                              <li>
-                                <NavLink to="/dashboard/orderHistory">
+                                <NavLink to="/dashboard/registered_camps">
                                   <FaCalendar></FaCalendar>
-                                  Order History
+                                  Registered Camps
                                 </NavLink>
                               </li>
 
                               <li>
-                                <NavLink to="/dashboard/payment">
+                                <NavLink to="/dashboard/paymentHistory">
                                   <FaList></FaList>
                                   Payment
                                 </NavLink>
