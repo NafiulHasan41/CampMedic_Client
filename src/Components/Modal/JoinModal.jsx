@@ -19,7 +19,7 @@ const JoinModal = ({camp , refetch  }) => {
     const axiosSecure = useAxiosSecure();
 
     const { user } = useAuth();
-    const { isAdmin } = useAdmin();
+    const  [isAdmin] = useAdmin();
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -31,17 +31,13 @@ const JoinModal = ({camp , refetch  }) => {
       setSelectedOption(selectedOption);
       
     };
+     
 
     //handle submission
 
     const handleJoin = async (e) => {
         e.preventDefault();
 
-        if(isAdmin)
-            {
-                return Swal.fire('Admins cannot join the camp');
-            
-            }
 
         setIsOpen(false);
 
@@ -94,13 +90,24 @@ const JoinModal = ({camp , refetch  }) => {
 
     }
 
+    const handle_Pay_Button = () =>{
+
+        if(isAdmin)
+            {
+                Swal.fire("You are an admin, you can't join the camp")
+            }
+            else{
+                setIsOpen(true);
+            }
+    }
+
 
 
     return (
         <div>
 
       <div className="relative flex justify-center">
-          <button onClick={()=> setIsOpen(true)} className=" btn bg-[#40E0D0] font-bold text-xl hover:bg-cyan-200
+          <button onClick={handle_Pay_Button} className=" btn bg-[#40E0D0] font-bold text-xl hover:bg-cyan-200
               hover:scale-110 rounded-full border-none ">Join Camp</button>
 
           {isOpen && (

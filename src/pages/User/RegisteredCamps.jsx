@@ -3,8 +3,7 @@ import useAxiosSecure from "../../hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 
 
 const RegisteredCamps = () => {
@@ -15,6 +14,9 @@ const RegisteredCamps = () => {
     const [search, setSearch] = useState('');
     const [searchText, setSearchText] = useState('');
     const [camps, setCamps] = useState([]);
+   
+    //for navigation
+    const navigate = useNavigate();
 
     const fetchCamps = async ({ queryKey }) => {
         const [, currentPage, itemsPerPage, search] = queryKey;
@@ -111,6 +113,17 @@ const RegisteredCamps = () => {
         </section>
     </div>;
 
+    const handle_pay = (camp) =>{
+        if(camp?.ConfirmationStatus == "Pending")
+            {
+                Swal.fire("Kindly hold on until the organizer confirms.")
+            }
+            else
+            {
+               navigate(`/dashboard/pay/${camp._id}`);
+            }
+    }
+
     return (
         <div>
             <div>
@@ -158,7 +171,7 @@ const RegisteredCamps = () => {
                                 <td className="w-1/10">
                                     {camp?.PaymentStatus === 'Unpaid'
                                         ?
-                                         <Link to={`/dashboard/pay/${camp._id}`} >   <button className="hover:scale-110">Pay</button></Link>
+                                        <button onClick={()=>{handle_pay(camp)}} className="hover:scale-110">Pay</button>
                                         : camp?.PaymentStatus
                                     }
                                 </td>

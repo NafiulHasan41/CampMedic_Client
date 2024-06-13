@@ -6,6 +6,7 @@ import useAuth from "../../hooks/useAuth";
 import PropTypes from 'prop-types';
 import { useNavigate } from "react-router-dom";
 
+
 const Payment = ({camp}) => {
 
 
@@ -105,7 +106,9 @@ const Payment = ({camp}) => {
                     date: new Date(), // utc date convert. use moment js to 
                     campId: camp.CampId,
                     participantId: camp._id,
-                    CampName : camp.CampName,          
+                    CampName : camp.CampName,  
+                    PaymentStatus : 'Paid',
+                    ConfirmationStatus : 'Confirmed',        
                 }
 
                 const res = await axiosSecure.post('/payments', payment);
@@ -147,7 +150,7 @@ const Payment = ({camp}) => {
                     },
                 }} />   
                  <div className=" text-center">
-                 <button className="btn w-full my-10" type="submit" disabled={!stripe ||
+                 <button className="btn w-full my-10 bg-[#40E0D0]" type="submit" disabled={!stripe ||
                               !clientSecret}>
                               Pay
                           </button>
