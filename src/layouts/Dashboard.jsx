@@ -138,7 +138,7 @@ const Dashboard = () => {
                                 </NavLink>
                               </li>
                               <li>
-                                <NavLink to="/dashboard/usersQuery">
+                                <NavLink to="/dashboard/user_ratting">
                                 <VscFeedback />
                                   USER REVIEW & FEEDBACK
                                 </NavLink>

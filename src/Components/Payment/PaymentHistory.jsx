@@ -62,7 +62,8 @@ const PaymentHistory = () => {
         setSearch(searchText);
     };
 
-    if (isLoading || countLoading) return <div className="text-center">
+    if (isLoading || countLoading) 
+    return <div className="text-center">
         <section className="bg-white min-h-screen">
             <div className="container px-6 py-10 mx-auto animate-pulse">
                 <h1 className="w-48 h-2 mx-auto bg-gray-200 rounded-lg dark:bg-gray-700"></h1>

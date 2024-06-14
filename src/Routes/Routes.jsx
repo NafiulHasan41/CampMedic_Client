@@ -20,6 +20,7 @@ import UserHome from "../pages/User/UserHome";
 import RegisteredCamps from "../pages/User/RegisteredCamps";
 import Pay from "../Components/Payment/Pay";
 import PaymentHistory from "../Components/Payment/PaymentHistory";
+import Ratting from "../pages/Admin/Ratting";
 
 
   export const router = createBrowserRouter([
@@ -78,6 +79,12 @@ import PaymentHistory from "../Components/Payment/PaymentHistory";
           path:"update_user",
           element:<PrivateRoute><UpdateUser/></PrivateRoute>
         },
+        {
+          path:"user_ratting",
+          element:<AdminRoute><Ratting/></AdminRoute>
+        },
+
+
         // user route
         
         {
