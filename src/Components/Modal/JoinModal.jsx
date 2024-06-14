@@ -90,7 +90,7 @@ const JoinModal = ({camp , refetch  }) => {
 
     }
 
-    const handle_Pay_Button = () =>{
+    const handle_Join_Button = () =>{
 
         if(isAdmin)
             {
@@ -107,7 +107,7 @@ const JoinModal = ({camp , refetch  }) => {
         <div>
 
       <div className="relative flex justify-center">
-          <button onClick={handle_Pay_Button} className=" btn bg-[#40E0D0] font-bold text-xl hover:bg-cyan-200
+          <button onClick={handle_Join_Button} className=" btn bg-[#40E0D0] font-bold text-xl hover:bg-cyan-200
               hover:scale-110 rounded-full border-none ">Join Camp</button>
 
           {isOpen && (

@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import FeedbackModal from "../../Components/Modal/FeedbackModal";
 
 
 const RegisteredCamps = () => {
@@ -171,8 +172,8 @@ const RegisteredCamps = () => {
                                 <td className="w-1/10">
                                     {camp?.PaymentStatus === 'Unpaid'
                                         ?
-                                        <button onClick={()=>{handle_pay(camp)}} className="hover:scale-110">Pay</button>
-                                        : camp?.PaymentStatus
+                                        <button onClick={()=>{handle_pay(camp)}} className="bg-red-500 p-2 rounded-lg text-white hover:scale-110">Pay</button>
+                                        : <span className=" bg-green-500 p-2 rounded-lg text-white"> { camp?.PaymentStatus} </span>
                                     }
                                 </td>
                                 <td className="w-1/10">
@@ -189,8 +190,7 @@ const RegisteredCamps = () => {
                                     </button>
                                 </td>
                                 <td className="w-1/10">
-                                    <button
-                                        className={`text-black p-2 font-bold rounded-lg hover:scale-125`}> Feedback </button>
+                                 <FeedbackModal camp={camp} />
                                 </td>
                             </tr>
                         )}
