@@ -197,6 +197,7 @@ const RegisteredCamps = () => {
                     </tbody>
                 </table>
             </div>
+            
             <div className='flex justify-center mt-12 overflow-x-auto w-full'>
                 <button
                     disabled={currentPage === 1}

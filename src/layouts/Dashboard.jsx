@@ -139,16 +139,11 @@ const Dashboard = () => {
                               </li>
                               <li>
                                 <NavLink to="/dashboard/usersQuery">
-                                  <FaUsers></FaUsers>
-                                  USER REVIEW
+                                <VscFeedback />
+                                  USER REVIEW & FEEDBACK
                                 </NavLink>
                               </li>
-                              <li>
-                                <NavLink to="/dashboard/usersQuery">
-                                <VscFeedback />
-                                 USER FEEDBACK
-                                 </NavLink>
-                              </li>
+                              
                             </>
                           ) : (
                             <>
@@ -168,7 +163,7 @@ const Dashboard = () => {
                               <li>
                                 <NavLink to="/dashboard/paymentHistory">
                                   <FaList></FaList>
-                                  Payment
+                                  Payment History
                                 </NavLink>
                               </li>
                             </>
