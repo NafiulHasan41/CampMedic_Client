@@ -142,7 +142,7 @@ const Navbar = () => {
 
                            <div className="flex gap-2">
                                <Link to='/'>
-                               <img className="w-full h-10 sm:h-10 rounded-lg" src="/src/assets/campmediclogo.jpeg"
+                               <img className="w-full h-10 sm:h-10 rounded-lg" src="https://i.ibb.co/QrJVR3w/campmediclogo.jpg"
                                    alt="logo" />
                                </Link>
 

@@ -34,7 +34,7 @@ const Footer = () => {
         
         <div className="flex flex-col gap-4 md:flex-row items-center justify-between">
             <Link to='/'>
-                <img className=" w-40 rounded-xl" src="/src/assets/campmediclogo.jpeg" alt=""/>
+                <img className=" w-40 rounded-xl" src="https://i.ibb.co/QrJVR3w/campmediclogo.jpg" alt=""/>
             </Link>
 
             <div>

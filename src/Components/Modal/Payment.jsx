@@ -59,12 +59,13 @@ const Payment = ({camp}) => {
         })
 
         if (error) {
-            console.log('payment error', error);
+            // console.log('payment error', error);
+            Swal.fire(error.message)
             setError(error.message);
             return
         }
         else {
-            console.log('[PaymentMethod]', paymentMethod)
+            // console.log('[PaymentMethod]', paymentMethod)
             setError('');
         }
 
@@ -89,13 +90,14 @@ const Payment = ({camp}) => {
       })
 
         if (confirmError) {
-            console.log('confirm error', confirmError)
-            console.log('confirm error')
+            Swal.fire(confirmError.message)
+            // console.log('confirm error', confirmError)
+            // console.log('confirm error')
         }
         else {
-            console.log('payment intent', paymentIntent)
+            // console.log('payment intent', paymentIntent)
             if (paymentIntent.status === 'succeeded') {
-                console.log('transaction id', paymentIntent.id);
+                // console.log('transaction id', paymentIntent.id);
                 setTransactionId(paymentIntent.id);
 
                 // now save the payment in the database

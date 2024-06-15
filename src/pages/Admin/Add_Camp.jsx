@@ -48,9 +48,9 @@ const Add_Camp = () => {
             const imageURL = await imageUpload(imageFile);
             
             const time = campTime.format('HH:mm:ss');
-            const newCamp = { CampName: data.CampName, Image: imageURL, HealthcareProfessional: data.HealthcareProfessional, Location: data.Location, CampFees: data.CampFees, ParticipantCount: data.ParticipantCount, Date: campDate, Time: time , Description: data.Description}
+            const newCamp = { CampName: data.CampName, Image: imageURL, HealthcareProfessional: data.HealthcareProfessional, Location: data.Location, CampFees: data.CampFees, ParticipantCount: parseInt(data.ParticipantCount), Date: campDate, Time: time , Description: data.Description}
             
-            console.log(newCamp);
+            // console.log(newCamp);
 
 
             try{

@@ -23,7 +23,7 @@ const UpdateUser = () => {
                 imageURL = await imageUpload(imageFile);
             }
 
-            console.log('Submitted userName:', data.userName);  // Debug log
+            // console.log('Submitted userName:', data.userName);  
             const url = imageURL ? imageURL : user.photoURL;
 
             await updateUserProfile(data.userName, url);
@@ -32,7 +32,7 @@ const UpdateUser = () => {
                 email: user.email,
             };
 
-            console.log('UserInfo being sent:', userInfo);  // Debug log
+            // console.log('UserInfo being sent:', userInfo);  
             const res = await axiosSecure.patch('/user-update', userInfo);
 
             if (res.data.acknowledged) {

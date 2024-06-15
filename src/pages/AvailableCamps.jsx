@@ -40,7 +40,7 @@ const AvailableCamps = () => {
   const fetchCamps = async ({ queryKey }) => {
     
     const [  ,currentPage, itemsPerPage, search, sort] = queryKey;
-    console.log("Inside" ,currentPage, itemsPerPage)
+    // console.log("Inside" ,currentPage, itemsPerPage)
     const response = await axiosPublic.get(`/camps?page=${currentPage}&size=${itemsPerPage}&sort=${sort}&search=${search}`);
     return response.data;
     
@@ -79,7 +79,7 @@ const AvailableCamps = () => {
     }
   }, [campCount,countError,countLoading]);
 
-  console.log(count);
+  // console.log(count);
 
  //pagination
   const numberOfPages = Math.ceil(count / itemsPerPage)

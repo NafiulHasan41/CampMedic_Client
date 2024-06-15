@@ -33,7 +33,7 @@ const FeedbackModal = ({camp}) => {
 
         try{
                   const res = await axiosSecure.post("/ratting", Reviewer);
-                  console.log(res.data.insertedId);
+                //   console.log(res.data.insertedId);
                   if(res.data.insertedId){
                       Swal.fire('Review Submitted Successfully')
 

@@ -80,7 +80,7 @@ const UpdateCamp = ({camp , refetch  } ) => {
             const time = campTime.format('HH:mm:ss');
             const newCamp = { CampName: data.CampName, Image: image_url , HealthcareProfessional: data.HealthcareProfessional, Location: data.Location, CampFees: data.CampFees.toString()  , ParticipantCount: data.ParticipantCount, Date: campDate, Time: time , Description: data.Description}
             
-            console.log(newCamp);
+            // console.log(newCamp);
 
 
           

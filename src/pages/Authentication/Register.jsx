@@ -28,7 +28,7 @@ const Register = () => {  const axiosPublic = useAxiosPublic();
         createUser(data.email, data.password)
             .then(result => {
                 const loggedUser = result.user;
-                console.log("logged in user" , loggedUser);
+                // console.log("logged in user" , loggedUser);
                 updateUserProfile(data.name, imageURL)
                     .then( async() => {
                        
