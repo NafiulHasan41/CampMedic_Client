@@ -32,6 +32,4 @@ Password: `Nha41@#`
 19. **Privacy settings:** Users can adjust their privacy settings to control who can see their information.
 20. **Community features:** The website includes features that foster a sense of community among users, such as forums or chat rooms.
 
-## Additional Information
 
-Add any additional information about your website here.
