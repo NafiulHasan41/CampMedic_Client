@@ -32,7 +32,7 @@ const AdminHome = () => {
         }
     })
 
-    console.log(campData)
+    // console.log(campData)
 
     if(campPriceLoading)
         {
