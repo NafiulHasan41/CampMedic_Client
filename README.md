@@ -1,9 +1,10 @@
 # CampMedic
 
-## Organizers
+<!-- ## Organizers
 
 Username: `nhashik4001@gmail.com`
-Password: `Nha41@#`
+Password: `Nha41@#` -->
+
 
 ## Live Site URL
 
